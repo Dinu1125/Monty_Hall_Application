@@ -1,0 +1,24 @@
+<div class="monty-hall-game">
+  <h1>MONTY HALL GAME</h1>
+  <form [formGroup]="gameForm" class="game-form">
+    <table>
+      <tr>
+        <td><label>Enter Number of Simulations : </label></td>
+        <td><input type="number" formControlName="numSimulations" id="numSimulations" class="form-control" placeholder="Number of Simulations"></td>
+      </tr>
+      <tr>
+        <td><label>Switch to Anthor Door : </label></td>
+        <td><input type="checkbox" formControlName="changeDoor" id="changeDoor" class="form-control"></td>
+      </tr>
+      <tr>
+        <td><button type="submit" (click)="playGame()" class="btn btn-primary">Play</button></td>
+      </tr>
+  </table>
+  </form>
+
+  <div>
+    <div *ngIf="result" class="result-box">
+      <h2>Number of Wins : {{result}}</h2>
+    </div>
+  </div>
+</div>
