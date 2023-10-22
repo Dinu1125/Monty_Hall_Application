@@ -29,7 +29,7 @@
                 doors.Remove(initialChoice);
                 doors.Remove(carDoor);
 
-                // The remaining door in the list is the one to be opened by the presenter
+                // The remaining door in the list is the one to be opened by the user
                 int doorToOpen = doors.First();
 
                 int finalChoice;
